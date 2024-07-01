@@ -1,0 +1,224 @@
+{
+    "movie": [
+        {
+          "id": 1,
+          "name": "Người Nhện: Không Còn Nhà ",
+          "status": true,
+          "description": "Peter Parker đã bị lộ mặt và không còn có thể tách biệt cuộc sống bình thường của mình với những yêu cầu cao của việc trở thành một Siêu anh hùng. Khi anh ta yêu cầu sự giúp đỡ từ Doctor Strange, mọi thứ càng trở nên nguy hiểm hơn, buộc anh ta phải khám phá ra ý nghĩa thực sự của việc trở thành Người Nhện.",
+          "release_year": "2021",
+          "director": "John Dow",
+          "img_url": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/y4SQ2dJ1y2LBUnxTH7hCe8sr29c.jpg",
+          "trailers_url": "https://youtu.be/o4NzWTNqSto"
+        },
+        {
+          "id": 2,
+          "name": "Người Nhện: Du Hành Vũ Trụ Nhện",
+          "status": true,
+          "description": "Miles Morales tái xuất trong phần tiếp theo của bom tấn hoạt hình từng đoạt giải Oscar - Spider-Man: Across the Spider-Verse. Sau khi gặp lại Gwen Stacy, chàng Spider-Man thân thiện đến từ Brooklyn phải du hành qua đa vũ trụ và gặp một nhóm Người Nhện chịu trách nhiệm bảo vệ các thế giới song song. Nhưng khi nhóm siêu anh hùng xung đột về cách xử lý một mối đe dọa mới, Miles buộc phải đọ sức với các Người Nhện khác và phải xác định lại ý nghĩa của việc trở thành một người hùng để có thể cứu những người cậu yêu thương nhất.",
+          "release_year": "2023",
+          "director": "Ban Dow",
+          "img_url": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/bX547n5W9ZIKCeAE44Vf2nfw4w.jpg",
+          "trailers_url": "https://youtu.be/SUz8Aw28vrc"
+        },
+        {
+          "id": 3,
+          "name": "Đại Chiến Người Khổng Lồ",
+          "status": true,
+          "description": "Chứng kiến quê hương bị tàn phá, chàng thanh niên Eren Yeager quyết tâm chiến đấu với bọn Titan khổng lồ đang đe dọa hủy diệt loài người.",
+          "release_year": "2023",
+          "director": "Ban Dow",
+          "img_url": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/qDK2qEA5pfUK7Rog8urvgKuaXiP.jpg",
+          "trailers_url": "https://www.youtube.com/watch?v=O9T0j8mSPx8"
+        },
+        {
+          "id": 4,
+          "name": "Án Mạng Ở Venice",
+          "status": true,
+          "description": "Dựa trên tiểu thuyết Hallowe'en Party của nhà văn Agatha Christie, hành trình phá án của thám tử Hercule Poirot tiếp tục được đưa lên màn ảnh rộng.",
+          "release_year": "2023",
+          "director": "Kenneth Branagh",
+          "img_url": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/3gsRQEqvMzkUdirHrZ10MdqamCR.jpg",
+          "trailers_url": "https://www.youtube.com/watch?v=EL8FdLQFUhc"
+        },
+        {
+          "id": 5,
+          "name": "Biệt Đội Marvel",
+          "status": true,
+          "description": "Carol Danvers bị vướng vào sức mạnh của Kamala Khan và Monica Rambeau, buộc họ phải hợp tác với nhau để cứu vũ trụ.",
+          "release_year": "2023",
+          "director": "Nia DaCosta",
+          "img_url": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/qgotFL0XUevylN2enbc3SeT7x2m.jpg",
+          "trailers_url": "https://youtu.be/uwmDH12MAA4"
+        },
+        {
+          "id": 6,
+          "name": "Người Nhện: Không Còn Nhà ",
+          "status": true,
+          "description": "Peter Parker đã bị lộ mặt và không còn có thể tách biệt cuộc sống bình thường của mình với những yêu cầu cao của việc trở thành một Siêu anh hùng. Khi anh ta yêu cầu sự giúp đỡ từ Doctor Strange, mọi thứ càng trở nên nguy hiểm hơn, buộc anh ta phải khám phá ra ý nghĩa thực sự của việc trở thành Người Nhện.",
+          "release_year": "2021",
+          "director": "John Dow",
+          "img_url": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/y4SQ2dJ1y2LBUnxTH7hCe8sr29c.jpg",
+          "trailers_url": "https://youtu.be/o4NzWTNqSto"
+        },
+        {
+          "id": 7,
+          "name": "Người Nhện: Du Hành Vũ Trụ Nhện",
+          "status": true,
+          "description": "Miles Morales tái xuất trong phần tiếp theo của bom tấn hoạt hình từng đoạt giải Oscar - Spider-Man: Across the Spider-Verse. Sau khi gặp lại Gwen Stacy, chàng Spider-Man thân thiện đến từ Brooklyn phải du hành qua đa vũ trụ và gặp một nhóm Người Nhện chịu trách nhiệm bảo vệ các thế giới song song. Nhưng khi nhóm siêu anh hùng xung đột về cách xử lý một mối đe dọa mới, Miles buộc phải đọ sức với các Người Nhện khác và phải xác định lại ý nghĩa của việc trở thành một người hùng để có thể cứu những người cậu yêu thương nhất.",
+          "release_year": "2023",
+          "director": "Ban Dow",
+          "img_url": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/bX547n5W9ZIKCeAE44Vf2nfw4w.jpg",
+          "trailers_url": "https://youtu.be/SUz8Aw28vrc"
+        },
+        {
+          "id": 8,
+          "name": "Đại Chiến Người Khổng Lồ",
+          "status": true,
+          "description": "Chứng kiến quê hương bị tàn phá, chàng thanh niên Eren Yeager quyết tâm chiến đấu với bọn Titan khổng lồ đang đe dọa hủy diệt loài người.",
+          "release_year": "2023",
+          "director": "Ban Dow",
+          "img_url": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/qDK2qEA5pfUK7Rog8urvgKuaXiP.jpg",
+          "trailers_url": "https://www.youtube.com/watch?v=O9T0j8mSPx8"
+        },
+        {
+          "id": 9,
+          "name": "Án Mạng Ở Venice",
+          "status": true,
+          "description": "Dựa trên tiểu thuyết Hallowe'en Party của nhà văn Agatha Christie, hành trình phá án của thám tử Hercule Poirot tiếp tục được đưa lên màn ảnh rộng.",
+          "release_year": "2023",
+          "director": "Kenneth Branagh",
+          "img_url": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/3gsRQEqvMzkUdirHrZ10MdqamCR.jpg",
+          "trailers_url": "https://www.youtube.com/watch?v=EL8FdLQFUhc"
+        },
+        {
+          "id": 10,
+          "name": "Biệt Đội Marvel",
+          "status": true,
+          "description": "Carol Danvers bị vướng vào sức mạnh của Kamala Khan và Monica Rambeau, buộc họ phải hợp tác với nhau để cứu vũ trụ.",
+          "release_year": "2023",
+          "director": "Nia DaCosta",
+          "img_url": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/qgotFL0XUevylN2enbc3SeT7x2m.jpg",
+          "trailers_url": "https://youtu.be/uwmDH12MAA4"
+        },
+        {
+          "id": 11,
+          "name": "Người Nhện: Không Còn Nhà ",
+          "status": true,
+          "description": "Peter Parker đã bị lộ mặt và không còn có thể tách biệt cuộc sống bình thường của mình với những yêu cầu cao của việc trở thành một Siêu anh hùng. Khi anh ta yêu cầu sự giúp đỡ từ Doctor Strange, mọi thứ càng trở nên nguy hiểm hơn, buộc anh ta phải khám phá ra ý nghĩa thực sự của việc trở thành Người Nhện.",
+          "release_year": "2021",
+          "director": "John Dow",
+          "img_url": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/y4SQ2dJ1y2LBUnxTH7hCe8sr29c.jpg",
+          "trailers_url": "https://youtu.be/o4NzWTNqSto"
+        },
+        {
+          "id": 12,
+          "name": "Người Nhện: Du Hành Vũ Trụ Nhện",
+          "status": true,
+          "description": "Miles Morales tái xuất trong phần tiếp theo của bom tấn hoạt hình từng đoạt giải Oscar - Spider-Man: Across the Spider-Verse. Sau khi gặp lại Gwen Stacy, chàng Spider-Man thân thiện đến từ Brooklyn phải du hành qua đa vũ trụ và gặp một nhóm Người Nhện chịu trách nhiệm bảo vệ các thế giới song song. Nhưng khi nhóm siêu anh hùng xung đột về cách xử lý một mối đe dọa mới, Miles buộc phải đọ sức với các Người Nhện khác và phải xác định lại ý nghĩa của việc trở thành một người hùng để có thể cứu những người cậu yêu thương nhất.",
+          "release_year": "2023",
+          "director": "Ban Dow",
+          "img_url": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/bX547n5W9ZIKCeAE44Vf2nfw4w.jpg",
+          "trailers_url": "https://youtu.be/SUz8Aw28vrc"
+        },
+        {
+          "id": 13,
+          "name": "Đại Chiến Người Khổng Lồ",
+          "status": true,
+          "description": "Chứng kiến quê hương bị tàn phá, chàng thanh niên Eren Yeager quyết tâm chiến đấu với bọn Titan khổng lồ đang đe dọa hủy diệt loài người.",
+          "release_year": "2023",
+          "director": "Ban Dow",
+          "img_url": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/qDK2qEA5pfUK7Rog8urvgKuaXiP.jpg",
+          "trailers_url": "https://www.youtube.com/watch?v=O9T0j8mSPx8"
+        },
+        {
+          "id": 14,
+          "name": "Án Mạng Ở Venice",
+          "status": true,
+          "description": "Dựa trên tiểu thuyết Hallowe'en Party của nhà văn Agatha Christie, hành trình phá án của thám tử Hercule Poirot tiếp tục được đưa lên màn ảnh rộng.",
+          "release_year": "2023",
+          "director": "Kenneth Branagh",
+          "img_url": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/3gsRQEqvMzkUdirHrZ10MdqamCR.jpg",
+          "trailers_url": "https://www.youtube.com/watch?v=EL8FdLQFUhc"
+        },
+        {
+          "id": 15,
+          "name": "Biệt Đội Marvel",
+          "status": true,
+          "description": "Carol Danvers bị vướng vào sức mạnh của Kamala Khan và Monica Rambeau, buộc họ phải hợp tác với nhau để cứu vũ trụ.",
+          "release_year": "2023",
+          "director": "Nia DaCosta",
+          "img_url": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/qgotFL0XUevylN2enbc3SeT7x2m.jpg",
+          "trailers_url": "https://youtu.be/uwmDH12MAA4"
+        },
+        {
+          "id": 16,
+          "name": "Người Nhện: Không Còn Nhà ",
+          "status": true,
+          "description": "Peter Parker đã bị lộ mặt và không còn có thể tách biệt cuộc sống bình thường của mình với những yêu cầu cao của việc trở thành một Siêu anh hùng. Khi anh ta yêu cầu sự giúp đỡ từ Doctor Strange, mọi thứ càng trở nên nguy hiểm hơn, buộc anh ta phải khám phá ra ý nghĩa thực sự của việc trở thành Người Nhện.",
+          "release_year": "2021",
+          "director": "John Dow",
+          "img_url": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/y4SQ2dJ1y2LBUnxTH7hCe8sr29c.jpg",
+          "trailers_url": "https://youtu.be/o4NzWTNqSto"
+        },
+        {
+          "id": 17,
+          "name": "Người Nhện: Du Hành Vũ Trụ Nhện",
+          "status": true,
+          "description": "Miles Morales tái xuất trong phần tiếp theo của bom tấn hoạt hình từng đoạt giải Oscar - Spider-Man: Across the Spider-Verse. Sau khi gặp lại Gwen Stacy, chàng Spider-Man thân thiện đến từ Brooklyn phải du hành qua đa vũ trụ và gặp một nhóm Người Nhện chịu trách nhiệm bảo vệ các thế giới song song. Nhưng khi nhóm siêu anh hùng xung đột về cách xử lý một mối đe dọa mới, Miles buộc phải đọ sức với các Người Nhện khác và phải xác định lại ý nghĩa của việc trở thành một người hùng để có thể cứu những người cậu yêu thương nhất.",
+          "release_year": "2023",
+          "director": "Ban Dow",
+          "img_url": "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/bX547n5W9ZIKCeAE44Vf2nfw4w.jpg",
+          "trailers_url": "https://youtu.be/SUz8Aw28vrc"
+        },
+        {
+          "id": 18,
+          "name": "Đại Chiến Người Khổng Lồ",
+          "status": true,
+          "description": "Chứng kiến quê hương bị tàn phá, chàng thanh niên Eren Yeager quyết tâm chiến đấu với bọn Titan khổng lồ đang đe dọa hủy diệt loài người.",
+          "release_year": "2023",
+          "director": "Ban Dow",
+          "img_url": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/qDK2qEA5pfUK7Rog8urvgKuaXiP.jpg",
+          "trailers_url": "https://www.youtube.com/watch?v=O9T0j8mSPx8"
+        },
+        {
+          "id": 19,
+          "name": "Án Mạng Ở Venice",
+          "status": true,
+          "description": "Dựa trên tiểu thuyết Hallowe'en Party của nhà văn Agatha Christie, hành trình phá án của thám tử Hercule Poirot tiếp tục được đưa lên màn ảnh rộng.",
+          "release_year": "2023",
+          "director": "Kenneth Branagh",
+          "img_url": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/3gsRQEqvMzkUdirHrZ10MdqamCR.jpg",
+          "trailers_url": "https://www.youtube.com/watch?v=EL8FdLQFUhc"
+        },
+        {
+          "id": 20,
+          "name": "Biệt Đội Marvel",
+          "status": true,
+          "description": "Carol Danvers bị vướng vào sức mạnh của Kamala Khan và Monica Rambeau, buộc họ phải hợp tác với nhau để cứu vũ trụ.",
+          "release_year": "2023",
+          "director": "Nia DaCosta",
+          "img_url": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/qgotFL0XUevylN2enbc3SeT7x2m.jpg",
+          "trailers_url": "https://youtu.be/uwmDH12MAA4"
+        },
+        {
+          "id": 21,
+          "name": "Án Mạng Ở Venice",
+          "status": true,
+          "description": "Dựa trên tiểu thuyết Hallowe'en Party của nhà văn Agatha Christie, hành trình phá án của thám tử Hercule Poirot tiếp tục được đưa lên màn ảnh rộng.",
+          "release_year": "2023",
+          "director": "Kenneth Branagh",
+          "img_url": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/3gsRQEqvMzkUdirHrZ10MdqamCR.jpg",
+          "trailers_url": "https://www.youtube.com/watch?v=EL8FdLQFUhc"
+        },
+        {
+          "id": 22,
+          "name": "Biệt Đội Marvel",
+          "status": true,
+          "description": "Carol Danvers bị vướng vào sức mạnh của Kamala Khan và Monica Rambeau, buộc họ phải hợp tác với nhau để cứu vũ trụ.",
+          "release_year": "2023",
+          "director": "Nia DaCosta",
+          "img_url": "https://www.themoviedb.org/t/p/w300_and_h450_bestv2/qgotFL0XUevylN2enbc3SeT7x2m.jpg",
+          "trailers_url": "https://youtu.be/uwmDH12MAA4"
+        }
+      ]
+}
