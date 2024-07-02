@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
-import { Navbar, Nav, NavDropdown, Button, Form, Container, Row, Col } from 'react-bootstrap';
+import { Button, Form, Container, Row, Col } from 'react-bootstrap';
 import { toast } from 'react-toastify';
 import axios from "axios";
 
@@ -45,15 +45,15 @@ export default function Footer() {
       <Container>
         <Row className="flex-parent-ft">
           <Col className="flex-child-ft item1">
-            <Link to="index-2.html"><img className="logo" width="250" src="images/logo1.png" alt="" /></Link>
-            <p>Group 2 SE1741 - FPT University</p>
-            <p>Call us: <Link to="#">(+84) 834235369</Link></p>
+            <Link to="index-2.html"><img className="logo" width="250" src="images/logo192.png" alt="" /></Link>
+            <p>Tran Hoang Hai - FPT University</p>
+            <p>Call us: <Link to="#">(+84) 972773693</Link></p>
           </Col>
           <Col className="flex-child-ft item2">
             <h4>Resources</h4>
             <ul>
               <li><Link to="#">About</Link></li>
-              <li><Link to="#">Fermovie</Link></li>
+              <li><Link to="#">FBTMovieTrailer</Link></li>
               <li><Link to="#">Contact Us</Link></li>
               <li><Link to="#">Help Center</Link></li>
             </ul>
@@ -90,7 +90,7 @@ export default function Footer() {
         <Container>
           <Row>
             <Col className="ft-left">
-              <p><Link target="_blank" to="#">Fermovie</Link></p>
+              <p><Link target="_blank" to="#">FBTMovieTrailer</Link></p>
             </Col>
             <Col className="backtotop">
               <p><Link to="#" id="back-to-top">Back to top <i className="ion-ios-arrow-thin-up"></i></Link></p>
