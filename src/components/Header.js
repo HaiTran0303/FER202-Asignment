@@ -56,9 +56,9 @@ export default function Header() {
     <header className="ht-header">
       <Container>
         <Navbar bg="light" expand="lg" className="navbar-custom" style={{ margin: '0' }}>
-          <Navbar.Brand>
+          <Navbar.Brand style={{paddingTop: '17px'}}>
             <Link to="/" style={linkStyle}>
-              <img className="logo" src="/images/logo1.png" alt="Logo" width="200" height="58" />
+              <img className="logo" src="/images/logo8.png" alt="Logo" width="200" height="40" />
             </Link>
           </Navbar.Brand>
 
