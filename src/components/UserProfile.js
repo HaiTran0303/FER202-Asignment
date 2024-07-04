@@ -67,13 +67,13 @@ export default function UserProfile() {
     };
 
     const isPhoneNumberValid = (phoneNumber) => {
-        const phoneNumberPattern = /^\d{1,11}$/; // Kiểm tra xem số điện thoại có từ 1 đến 11 chữ số
+        const phoneNumberPattern = /^\d{1,11}$/; // Kiểm tra số điện thoại từ 1 đến 11 chữ số
         return phoneNumberPattern.test(phoneNumber);
     };
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Kiểm tra xem email có đúng định dạng không
-        // Kiểm tra xem email đã được nhập và không rỗng
+        // Kiểm tra định dạng email 
+        // Kiểm tra email được nhập hay để rỗng
         if (email !== '' && !isEmailValid(email)) {
             toast.error("Invalid email format. Please use a Gmail address.");
             setMessageEmail('Invalid email format');
@@ -89,7 +89,7 @@ export default function UserProfile() {
         } else {
             setMessageEmail('');
         }
-        // Kiểm tra xem số điện thoại có hợp lệ không
+        // validate phone number
         if (phonenumber !== '' && !isPhoneNumberValid(phonenumber)) {
             toast.error("Invalid phone number. Please use a phone number with 1 to 11 digits.");
             setMessagePhone('Invalid phone number');

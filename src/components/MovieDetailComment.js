@@ -64,10 +64,10 @@ function MovieDetailComment({
       return;
     }
 
-    // Assuming you have a function to submit the report to the server
+    
     axios
       .post(`http://localhost:9999/report`, {
-        user_id: userId, // Assuming you have the user's ID
+        user_id: userId, 
         comment_id: commentId,
         reason: newReport,
         create_at: getCurrentDate(),
@@ -78,7 +78,7 @@ function MovieDetailComment({
         toast.success("Report submitted successfully")
     }).catch(err => console.error(err))
 
-    // Close the report form after submission
+    
     setShowReportForm(false);
   };
 

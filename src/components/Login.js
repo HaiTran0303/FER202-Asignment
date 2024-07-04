@@ -55,7 +55,7 @@ export default function Login() {
 
   const formStyle = {
     marginTop: "90px",
-    backgroundColor: "rgba(255, 255, 255, 0.8)",
+    backgroundColor: "#233a50",
     padding: "50px",
     borderRadius: "10px",
   };
