@@ -73,13 +73,13 @@ export default function Login() {
           <Form.Group
             className="mb-3"
             controlId="formBasicEmail"
-            style={{ textAlign: "center" }}
+            style={{ textAlign: "center", color: "white" }}
           >
             <h3>Login</h3>
           </Form.Group>
           {message.length > 0 && <Alert variant="danger">{message}</Alert>}
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Username</Form.Label>
+            <Form.Label style={{ color: "white" }}>Username</Form.Label>
             <Form.Control
               type="username"
               placeholder="Username"
@@ -89,22 +89,19 @@ export default function Login() {
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
+            <Form.Label style={{ color: "white" }}>Password</Form.Label>
             <Form.Control
               type="password"
               placeholder="Password"
               value={password}
               onChange={handlePasswordChange}
             />
-            <Form.Text className="text-muted">
-              We'll never share your password with anyone else.
-            </Form.Text>
           </Form.Group>
           <Form.Group as={Row} className="mb-3">
-            <Col sm={{ span: 6 }}>
-              <Form.Check type="checkbox" label="Remember me" />
+            <Col sm={{ span: 7 }}>
+              <Form.Check type="checkbox" label="Remember me" style={{ color: "white" }}/>
             </Col>
-            <Col sm={{ span: 6 }}>
+            <Col sm={{ span: 7 }}>
               <Link>Forget Password?</Link>
             </Col>
           </Form.Group>
