@@ -4,18 +4,18 @@ import { Container, Row, Col, Button, Form, Card, Image } from "react-bootstrap"
 import axios from 'axios';
 
 export default function MovieRated() {
-  const { id } = JSON.parse(localStorage.getItem("user"));
-  const [sortOption, setSortOption] = useState('');
-  const [currentPage, setCurrentPage] = useState(1);
-  const [pageSize, setPageSize] = useState(5);
-  const [movies, setMovies] = useState([]);
-  const [movieComments, setMovieComments] = useState({});
+  const { id } = JSON.parse(localStorage.getItem("user"))
+  const [sortOption, setSortOption] = useState('')
+  const [currentPage, setCurrentPage] = useState(1)
+  const [pageSize, setPageSize] = useState(5)
+  const [movies, setMovies] = useState([])
+  const [movieComments, setMovieComments] = useState({})
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res1 = await axios.get(`http://localhost:9999/rate?user_id=${id}`);
-        const res2 = await axios.get(`http://localhost:9999/comment?user_id=${id}`);
+        const res1 = await axios.get(`http://localhost:9999/rate?user_id=${id}`)
+        const res2 = await axios.get(`http://localhost:9999/comment?user_id=${id}`)
 
         const movieIds = Array.from(new Set([
           ...res1.data.map(x => x.movie_id),
@@ -27,11 +27,11 @@ export default function MovieRated() {
           ""
         );
 
-        const movieResponse = await axios.get(`http://localhost:9999/movie?${query}`);
+        const movieResponse = await axios.get(`http://localhost:9999/movie?${query}`)
         const movieData = movieResponse.data;
 
         const filteredMovies = await Promise.all(movieData.map(async (movie) => {
-          const ratings = await axios.get(`http://localhost:9999/rate?user_id=${id}&movie_id=${movie.id}`);
+          const ratings = await axios.get(`http://localhost:9999/rate?user_id=${id}&movie_id=${movie.id}`)
           return {
             ...movie,
             rate: ratings.data.length > 0 ? ratings.data[0].rating : 0
@@ -41,25 +41,25 @@ export default function MovieRated() {
         // Apply sorting
         switch (sortOption) {
           case 'ratingDesc':
-            filteredMovies.sort((a, b) => b.rate - a.rate);
-            break;
+            filteredMovies.sort((a, b) => b.rate - a.rate)
+            break
           case 'ratingAsc':
-            filteredMovies.sort((a, b) => a.rate - b.rate);
-            break;
+            filteredMovies.sort((a, b) => a.rate - b.rate)
+            break
           case 'yearDesc':
-            filteredMovies.sort((a, b) => new Date(b.release_year) - new Date(a.release_year));
-            break;
+            filteredMovies.sort((a, b) => new Date(b.release_year) - new Date(a.release_year))
+            break
           case 'yearAsc':
-            filteredMovies.sort((a, b) => new Date(a.release_year) - new Date(b.release_year));
-            break;
+            filteredMovies.sort((a, b) => new Date(a.release_year) - new Date(b.release_year))
+            break
           default:
-            break;
+            break
         }
 
         setMovies(filteredMovies);
         fetchCommentsForMovies(movieIds);
       } catch (error) {
-        console.error("Error fetching data: " + error);
+        console.error("Error fetching data: " + error)
       }
     };
 
@@ -67,8 +67,8 @@ export default function MovieRated() {
       try {
         const commentsForMovies = await Promise.all(
           movieIds.map(async (movieId) => {
-            const response = await axios.get(`http://localhost:9999/comment?movie_id=${movieId}`);
-            return { movieId, comments: response.data, showAll: false };
+            const response = await axios.get(`http://localhost:9999/comment?movie_id=${movieId}`)
+            return { movieId, comments: response.data, showAll: false }
           })
         );
 
@@ -82,12 +82,12 @@ export default function MovieRated() {
 
         setMovieComments(commentsMap);
       } catch (error) {
-        console.error('Error fetching comments for movies:', error);
+        console.error('Error fetching comments for movies:', error)
       }
     };
 
-    fetchData();
-  }, [id, sortOption]);
+    fetchData()
+  }, [id, sortOption])
 
   const handleToggleComments = (movieId) => {
     setMovieComments((prevComments) => ({
@@ -96,18 +96,18 @@ export default function MovieRated() {
         comments: prevComments[movieId] ? prevComments[movieId].comments : [],
         showAll: !prevComments[movieId]?.showAll,
       },
-    }));
-  };
+    }))
+  }
 
   const handlePageChange = (newPage) => {
-    setCurrentPage(newPage);
-  };
+    setCurrentPage(newPage)
+  }
 
   const getPaginatedMovies = () => {
-    const startIndex = (currentPage - 1) * pageSize;
-    const endIndex = startIndex + pageSize;
-    return movies.slice(startIndex, endIndex);
-  };
+    const startIndex = (currentPage - 1) * pageSize
+    const endIndex = startIndex + pageSize
+    return movies.slice(startIndex, endIndex)
+  }
 
   return (
     <div>

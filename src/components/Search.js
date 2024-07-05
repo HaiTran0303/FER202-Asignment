@@ -6,32 +6,32 @@ import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
 const Search = () => {
-    const [movies, setMovies] = useState([]);
-    const [searchTerm, setSearchTerm] = useState('');
-    const location = useLocation();
-    const [genres, setGenres] = useState([]);
-    const [selectedGenres, setSelectedGenres] = useState([]);
-    const [startYear, setStartYear] = useState(1900);
-    const [endYear, setEndYear] = useState(new Date().getFullYear());
-    const [usersRate, setUsersRate] = useState([]);
-    const [minRating, setMinRating] = useState(0);
-    const [maxRating, setMaxRating] = useState(10);
-    const [visibleMovies, setVisibleMovies] = useState(8); // Number of movies to display initially
-    const [sortOption, setSortOption] = useState(''); // Default sort by popularity
-    const getCurrentYear = new Date().getFullYear();
+    const [movies, setMovies] = useState([])
+    const [searchTerm, setSearchTerm] = useState('')
+    const location = useLocation()
+    const [genres, setGenres] = useState([])
+    const [selectedGenres, setSelectedGenres] = useState([])
+    const [startYear, setStartYear] = useState(1900)
+    const [endYear, setEndYear] = useState(new Date().getFullYear())
+    const [usersRate, setUsersRate] = useState([])
+    const [minRating, setMinRating] = useState(0)
+    const [maxRating, setMaxRating] = useState(10)
+    const [visibleMovies, setVisibleMovies] = useState(8) //Số phim được hiển thị trong 1 trang
+    const [sortOption, setSortOption] = useState('') // Sắp xếp mặc định theo phổ biến
+    const getCurrentYear = new Date().getFullYear()
 
     useEffect(() => {
         axios
             .get(`http://localhost:9999/rate`)
             .then((response) => setUsersRate(response.data))
-            .catch((err) => console.error(err));
-    }, []);
+            .catch((err) => console.error(err))
+    }, [])
 
     useEffect(() => {
         axios.get("http://localhost:9999/genre")
             .then((res) => setGenres(res.data))
-            .catch((err) => console.error(err));
-    }, []);
+            .catch((err) => console.error(err))
+    }, [])
 
     useEffect(() => {
         const fetchData = async () => {

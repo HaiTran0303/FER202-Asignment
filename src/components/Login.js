@@ -12,11 +12,11 @@ export default function Login() {
 
   const handleEmailChange = (e) => {
     setUsername(e.target.value);
-  };
+  }
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
-  };
+  }
 
   const handleLogin = (e) => {
     e.preventDefault();
@@ -27,21 +27,21 @@ export default function Login() {
     axios
       .get("http://localhost:9999/user")
       .then((res) => {
-        const userData = res.data;
+        const userData = res.data
         const foundUser = userData.find(
           (item) => item.username === username && item.password === password
         );
         if (foundUser) {
           // Đăng nhập thành công, chuyển hướng đến trang Home
-          localStorage.setItem("user", JSON.stringify(foundUser));
-          window.location.href = "/";
+          localStorage.setItem("user", JSON.stringify(foundUser))
+          window.location.href = "/"
         } else {
           // Hiển thị thông báo đăng nhập không hợp lệ
           setMessage("Invalid username or password. Please try again.");
         }
       })
-      .catch((error) => console.error(error));
-  };
+      .catch((error) => console.error(error))
+  }
 
   const backgroundStyle = {
     backgroundImage: `url(${backgroundImage})`,
@@ -51,20 +51,20 @@ export default function Login() {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-  };
+  }
 
   const formStyle = {
     marginTop: "90px",
     backgroundColor: "#233a50",
     padding: "50px",
     borderRadius: "10px",
-  };
+  }
   const buttonStyle = {
     width: "100%", // Đảm bảo nút chiếm toàn bộ chiều rộng của form
     fontSize: "20px", // Kích thước chữ của nút
     textAlign: "center",
     marginTop: "12px"
-  };
+  }
 
   return (
     <div style={backgroundStyle}>

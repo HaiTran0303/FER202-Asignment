@@ -8,18 +8,18 @@ export default function ResetPassword() {
 
   const handlePasswordNewChange = (e) => {
     setPasswordNew(e.target.value);
-  };
+  }
 
   const handlePasswordConfirmChange = (e) => {
     setPasswordConfirm(e.target.value);
-  };
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("PasswordNew:", passwordnew);
     console.log("PasswordConfirm:", passwordconfirm);
     // Do something with the login data, like send it to an API
-  };
+  }
 
   const backgroundStyle = {
     backgroundImage: `url(${backgroundImage})`,
@@ -30,18 +30,18 @@ export default function ResetPassword() {
     justifyContent: "center",
     alignItems: "center",
     
-  };
+  }
 
   const formStyle = {
     backgroundColor: "rgba(255, 255, 255, 0.8)",
     padding: "60px",
     borderRadius: "10px",
-  };
+  }
   const buttonStyle = {
     width: "100%", // Đảm bảo nút chiếm toàn bộ chiều rộng của form
     fontSize: "20px", // Kích thước chữ của nút
     textAlign: "center",
-  };
+  }
   return (
     <div style={backgroundStyle}>
       <div style={formStyle}>

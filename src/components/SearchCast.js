@@ -9,8 +9,8 @@ const SearchCast = () => {
     const [casts, setCasts] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
     const location = useLocation();
-    const [visibleMovies, setVisibleMovies] = useState(12); // Number of movies to display initially
-    const [sortOption, setSortOption] = useState(''); // Default sort by popularity
+    const [visibleMovies, setVisibleMovies] = useState(12); // Số phim được hiển thị trong 1 trang
+    const [sortOption, setSortOption] = useState(''); //Sắp xếp mặc định theo phổ biến
 
     useEffect(() => {
         const fetchData = async () => {
