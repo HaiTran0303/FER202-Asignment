@@ -11,9 +11,7 @@ import UserProfile from "./UserProfile";
 import ChangePassword from "./ChangePassword";
 import MovieGrid from "./MovieGrid";
 import Filter  from "./Filter";
-import MovieList from "./MovieList";
 import MovieDetail from "./MovieDetail";
-import Wishlist1 from "./Wishlist1";
 import WishlistGrid from "./WishlistGrid";
 import MovieRated from "./MovieRated";
 import CastDetail from "./CastDetail";
@@ -27,6 +25,6 @@ import AdminMovieList from "./AdminMovieList";
 import AdminCast from "./AdminCast";
 export {
     Home, Header, Footer, Login, Signup, ResetPassword, ResetPassword2, Sidebar, BreadCrumb, UserProfile, 
-    ChangePassword, MovieGrid, Filter, MovieList, MovieDetail, Wishlist1, WishlistGrid, MovieRated, CastDetail,
+    ChangePassword, MovieGrid, Filter, MovieDetail,  WishlistGrid, MovieRated, CastDetail,
     AdminSidebar, Table, AdminTopNav, AdminFooter, Search, SearchCast, AdminMovieList,AdminCast
 }

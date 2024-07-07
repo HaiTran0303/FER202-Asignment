@@ -95,7 +95,7 @@ export default function Signup() {
 
   const formStyle = {
     marginTop: "90px",
-    backgroundColor: "rgba(255, 255, 255, 0.8)",
+    backgroundColor: "#233a50",
     padding: "50px",
     borderRadius: "10px",
   };
@@ -111,13 +111,13 @@ export default function Signup() {
           <Form.Group
             className="mb-3"
             controlId="formBasicEmail"
-            style={{ textAlign: "center" }}
+            style={{ textAlign: "center", color: "white" }}
           >
             <h3>Sign Up</h3>
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formBasicUsername">
-            <Form.Label>Username</Form.Label>
+            <Form.Label style={{ color: "white" }}>Username</Form.Label>
             <Form.Control
               type="username"
               placeholder="Username"
@@ -126,7 +126,7 @@ export default function Signup() {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Email</Form.Label>
+            <Form.Label style={{ color: "white" }}>Email</Form.Label>
             <Form.Control
               type="email"
               placeholder="Email"
@@ -135,28 +135,22 @@ export default function Signup() {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
+            <Form.Label style={{ color: "white" }}>Password</Form.Label>
             <Form.Control
               type="password"
               placeholder="Password"
               value={password}
               onChange={handlePasswordChange}
             />
-            <Form.Text className="text-muted">
-              We'll never share your password with anyone else.
-            </Form.Text>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicRePassword">
-            <Form.Label>Re-password</Form.Label>
+            <Form.Label style={{ color: "white" }}>Re-password</Form.Label>
             <Form.Control
               type="password"
               placeholder="Re-Pasword"
               value={rePassword}
               onChange={handleRePasswordChange}
             />
-            <Form.Text className="text-muted">
-              We'll never share your password with anyone else.
-            </Form.Text>
           </Form.Group>
           <Form.Group style={buttonStyle}>
             <Button
