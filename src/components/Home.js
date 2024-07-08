@@ -160,12 +160,9 @@ export default function Home() {
                                   height="284"
                                 />
                               </div>
-                              <div className="hvr-inner">
-                                <Link to={`/moviedetail/${movie.id}`}>Read more<i className="ion-android-arrow-dropright"></i></Link>
-                              </div>
                               <div className="title-in">
                                 <h6>
-                                  <Link >{movie.name}</Link>
+                                  <Link to={`/moviedetail/${movie.id}`}>{movie.name}</Link>
                                 </h6>
                                 <p>
                                   <i className="ion-android-star"></i>
