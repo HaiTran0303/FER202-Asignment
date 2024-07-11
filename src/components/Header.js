@@ -66,7 +66,6 @@ export default function Header() {
             <Nav className="flex-child-menu menu-left" style={{ display: 'flex', marginLeft: '12px' }}>
               <Link to="/home" style={menuItem}>Popular</Link>
               <Link to="/top-rated" style={menuItem}>Top Rated</Link>
-              <Link to="/upcoming" style={menuItem}>Upcoming</Link>
             </Nav>
 
             <Nav className="flex-child-menu navbar-right">

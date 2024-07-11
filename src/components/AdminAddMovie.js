@@ -32,21 +32,6 @@ function AdminAddMovie() {
       });
   };
 
-  const handleDiscardChange = () => {
-    const isConfirm = window.confirm("Are you sure discard change");
-    if (isConfirm) {
-      setMovieDetail({
-        name: "",
-        status: true,
-        description: "",
-        release_year: "",
-        director: "",
-        img_url: "",
-        trailers_url: "",
-      });
-    }
-  };
-
   return (
     <div id="adminMovie">
       <form className="container">
@@ -146,13 +131,6 @@ function AdminAddMovie() {
               className="btn btn-primary"
             >
               Add Movie
-            </button>
-            <button
-              type="button"
-              className="btn btn-warning"
-              onClick={handleDiscardChange}
-            >
-              Discard Change
             </button>
           </div>
         </div>

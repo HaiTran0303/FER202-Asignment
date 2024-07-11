@@ -33,12 +33,6 @@ export default function MovieDetail() {
   // Casts of this moive
   const [movieCasts, setMovieCasts] = useState([]);
 
-  // Comments of this moive
-  const [movieComments, setMovieComments] = useState([]);
-
-  // Comment value to this moive
-  const [myComment, setMyComment] = useState("");
-
   // error comment blank
   const [errBlankComment, setErrBlankComment] = useState("");
 
@@ -106,81 +100,6 @@ export default function MovieDetail() {
           .then((data) => setMovieCasts(data));
       });
   }, [id]);
-
-  /**
-   * Init: fetch total review by movie_id
-   */
-  useEffect(() => {
-    fetchCommnentByMovieId();
-  }, [id]);
-
-  const fetchCommnentByMovieId = () => {
-    axios
-      // fetch all user
-      .get(`http://localhost:9999/user`)
-      .then((response) => response.data)
-      .then((dataUsers) => {
-        // fetch all review by movie_id
-        axios
-          .get(`http://localhost:9999/comment?movie_id=${id}`)
-          .then((response) => response.data)
-          .then((data) => {
-            const nestedComments = nestComments(
-              data.map((item) => ({
-                ...item,
-                user: dataUsers.find((user) => user.id === item.user_id),
-              }))
-            );
-            setMovieComments(nestedComments);
-          });
-      });
-  };
-
-  /**
-   * convert comment array to nestedcomment by parent_comment_id
-   */
-  const nestComments = (comments) => {
-    const commentMap = {};
-    const nestedComments = [];
-
-    comments.forEach((comment) => {
-      commentMap[comment.id] = comment;
-      comment.replies = [];
-    });
-
-    comments.forEach((comment) => {
-      if (comment.parent_comment_id) {
-        commentMap[comment.parent_comment_id].replies.push(comment);
-      } else {
-        nestedComments.push(comment);
-      }
-    });
-
-    return nestedComments;
-  };
-
-  /**
-   * submit my comment
-   */
-  const handleSubmitComment = (data) => {
-    if (userId === -1) {
-      // User is not logged in, redirect to the login page
-      window.location.href = "/login";
-      return; // Stop execution to prevent adding to wishlist
-    }
-    if (data.content.trim() === "") {
-      setErrBlankComment("Please enter comment before submit");
-    } else {
-      axios
-        .post("http://localhost:9999/comment", data)
-        .then((response) => response.data)
-        .then((data) => {
-          setMyComment("");
-          fetchCommnentByMovieId();
-          setErrBlankComment("");
-        });
-    }
-  };
 
   /**
    * Init: fetch total rating data by movie_id
@@ -434,12 +353,6 @@ export default function MovieDetail() {
                     </a>
                   </li>
                   <li>
-                    <a data-toggle="tab" href="#reviews">
-                      {" "}
-                      Reviews
-                    </a>
-                  </li>
-                  <li>
                     <a data-toggle="tab" href="#cast">
                       {" "}
                       Casts{" "}
@@ -484,54 +397,6 @@ export default function MovieDetail() {
                           </Col>
                         </Row>
                       </Col>
-                    </Row>
-                  </div>
-                  <div id="reviews" className="tab review">
-                    <Row>
-                      <Col md={12} className="anime__details__form">
-                        <Form>
-                          <Form.Group controlId="comment">
-                            <Form.Control
-                              value={myComment}
-                              onChange={(e) => setMyComment(e.target.value)}
-                              type="text"
-                              placeholder="Your Comment"
-                              as="textarea"
-                            />
-                          </Form.Group>
-                          {errBlankComment !== "" && (
-                            <div class="alert alert-danger">
-                              {errBlankComment}
-                            </div>
-                          )}
-                          <Button
-                            type="button"
-                            onClick={() =>
-                              handleSubmitComment({
-                                movie_id: id,
-                                user_id: 1,
-                                content: myComment,
-                                create_at: getCurrentDate(),
-                                status: true,
-                                parent_comment_id: null,
-                              })
-                            }
-                          >
-                            <i className="fa fa-location-arrow"></i> Review
-                          </Button>
-                        </Form>
-                      </Col>
-                      {movieComments?.map((item, index) => (
-                        <div key={index} style={{ marginBottom: "20px" }}>
-                          <MovieDetailComment
-                            handleSubmitComment={handleSubmitComment}
-                            data={item}
-                            isParent
-                            movieId={id}
-                            userId={userId}
-                          />
-                        </div>
-                      ))}
                     </Row>
                   </div>
                   <div id="cast" className="tab">

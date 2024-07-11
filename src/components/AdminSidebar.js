@@ -13,7 +13,7 @@ export default function AdminSidebar() {
         <Link to="/" style={{ textDecoration: "none" }}>
           <img
             className="logo"
-            src="/images/logo1.png"
+            src="/images/logo8.png"
             alt="Logo"
             width="160"
             height="58"
@@ -59,12 +59,6 @@ export default function AdminSidebar() {
             <li>
               <Link>
                 <i className="fa fa-user"></i> Users{" "}
-                <span className="fa fa-chevron-right"></span>
-              </Link>
-            </li>
-            <li>
-              <Link>
-                <i className="fa fa-clipboard"></i> Report{" "}
                 <span className="fa fa-chevron-right"></span>
               </Link>
             </li>
