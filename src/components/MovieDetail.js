@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Row, Col, Button, Form, Image } from "react-bootstrap";
 import axios from "axios";
 import { FacebookShareButton } from "react-share";
-
-import MovieDetailComment from "./MovieDetailComment";
 import { getCurrentDate } from "./MovieDetailService";
 import { useParams } from "react-router-dom";
 
@@ -32,9 +30,6 @@ export default function MovieDetail() {
 
   // Casts of this moive
   const [movieCasts, setMovieCasts] = useState([]);
-
-  // error comment blank
-  const [errBlankComment, setErrBlankComment] = useState("");
 
   // rates total
   const [usersRate, setUsersRate] = useState([]);
@@ -190,18 +185,18 @@ export default function MovieDetail() {
     const fetchWishlist = async () => {
       try {
         // Fetch wishlist data for the user
-        const response = await axios.get(`http://localhost:9999/wishlist?user_id=${userId}`);
-        setWishlist(response.data);
+        const response = await axios.get(`http://localhost:9999/wishlist?user_id=${userId}`)
+        setWishlist(response.data)
       } catch (error) {
-        console.error('Error fetching wishlist:', error);
+        console.error('Error fetching wishlist:', error)
       }
     };
 
-    fetchWishlist();
-  }, [userId]);
+    fetchWishlist()
+  }, [userId])
 
-  const isInWishlist = (movieId) => {
-    return wishlist.some((item) => item.movie_id === movieId);
+  const isMovieInWishlist = (movieId) => {
+    return wishlist.some(wishlistItem => wishlistItem.movie_id === movieId);
   };
 
   const handleWishlist = async (movieId) => {
@@ -211,7 +206,7 @@ export default function MovieDetail() {
       return; // Stop execution to prevent adding to wishlist
     }
     try {
-      if (!isInWishlist(movieId)) {
+      if (!isMovieInWishlist(movieId)) {
         // Movie is not in the wishlist, add it
         await axios.post('http://localhost:9999/wishlist', { movie_id: movieId, user_id: userId });
         console.log(`Movie with ID ${movieId} added to wishlist.`);
@@ -267,7 +262,7 @@ export default function MovieDetail() {
             </h1>
             <div className="social-btn">
               <a href="#" onClick={() => handleWishlist(movie.id)} className="parent-btn">
-                <i className="ion-heart" style={{ color: isInWishlist(movie.id) ? 'red' : '#eec1c1', fontSize: '16px', backgroundColor: isInWishlist(movie.id) ? '#981818' : 'transparent' }}></i> Add to Favorite
+                <i className="ion-heart" style={{ color: isMovieInWishlist(movie.id) ? 'red' : '#eec1c1', fontSize: '16px', backgroundColor: isMovieInWishlist(movie.id) ? '#981818' : 'transparent' }}></i> Add to Favorite
               </a>
               <div className="hover-bnt">
                 <a href="javascript:void(0)" className="parent-btn">
