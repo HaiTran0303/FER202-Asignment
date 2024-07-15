@@ -108,18 +108,6 @@ export default function Home() {
                     </Link>
                   </div>
                   <div className="title-in">
-                    <div className="cate">
-
-                      {movieGenres
-                        .filter((mg) => mg.movie_id === movie.id)
-                        .map((mg) => (
-                          <span className="blue">
-                            <Link key={mg.id}>{genres.find((genre) => genre.id === mg.genre_id)?.name}</Link>
-                            <br></br>
-                          </span>
-                        ))}
-
-                    </div>
                     <h6>
                       <Link to={`/moviedetail/${movie.id}`} >{movie.name}</Link>
                     </h6>
@@ -144,12 +132,12 @@ export default function Home() {
                   View all <i className="ion-ios-arrow-right"></i>
                 </Link>
               </div>
-              <div className="tabs">
-                <div className="tab-content">
-                  <div id="tab1" className="tab active">
+              <div className="">
+                <div className="">
+                  <div id="" className="">
                     <div className="row">
                       {movie.map((movie) => (
-                        <Col md={3} className="movie-item-style-2 movie-item-style-1">
+                        <Col md={3} className="">
                           <div className="slide-it">
                             <div className="movie-item">
                               <div className="mv-img">
@@ -173,40 +161,6 @@ export default function Home() {
                           </div>
                         </Col>
                       ))}
-                    </div>
-                  </div>
-                  <div id="tab2" className="tab">
-                    <div className="row">
-                      <div className="slick-multiItem">
-                        <div className="slide-it">
-                          <div className="movie-item">
-                            <div className="mv-img">
-                              <img
-                                src="images/uploads/mv-item5.jpg"
-                                alt=""
-                                width="185"
-                                height="284"
-                              />
-                            </div>
-                            <div className="hvr-inner">
-                              <Link href="moviesingle.html">
-                                {" "}
-                                Read more{" "}
-                                <i className="ion-android-arrow-dropright"></i>{" "}
-                              </Link>
-                            </div>
-                            <div className="title-in">
-                              <h6>
-                                <Link >Interstellar</Link>
-                              </h6>
-                              <p>
-                                <i className="ion-android-star"></i>
-                                <span>7.4</span> /10
-                              </p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>

@@ -64,7 +64,7 @@ export default function Header() {
 
           <Navbar.Collapse id="bs-example-navbar-collapse-1">
             <Nav className="flex-child-menu menu-left" style={{ display: 'flex', marginLeft: '12px' }}>
-              <Link to="/home" style={menuItem}>Popular</Link>
+              <Link to="`/movie?search=`" style={menuItem}>Popular</Link>
               <Link to="/top-rated" style={menuItem}>Top Rated</Link>
             </Nav>
 
