@@ -241,25 +241,6 @@ const Search = () => {
                         <Form className="form-style-1" action="#">
                             <Row>
                                 <Col md={12} className="form-it">
-                                    <Form.Group controlId="genres">
-                                        <Form.Label>Genres</Form.Label>
-                                        <InputGroup style={{ width: '100%' }}>
-                                            {genres.map((genre) => (
-                                                <Form.Check
-                                                    style={{ display: 'flex', alignItems: 'end' }}
-                                                    key={genre.id}
-                                                    type="checkbox"
-                                                    id={genre.id}
-                                                    label={`\u00A0\u00A0${genre.name}`}
-                                                    onChange={() => handleGenreChange(genre.id)}
-                                                    checked={selectedGenres.includes(genre.id)}
-                                                />
-                                            ))}
-                                        </InputGroup>
-                                    </Form.Group>
-                                </Col>
-
-                                <Col md={12} className="form-it">
                                     <Form.Group controlId="ratingRange">
                                         <Form.Label>Rating Range: {minRating} - {maxRating}</Form.Label>
                                         <Slider

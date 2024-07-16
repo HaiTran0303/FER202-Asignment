@@ -65,7 +65,7 @@ export default function Header() {
           <Navbar.Collapse id="bs-example-navbar-collapse-1">
             <Nav className="flex-child-menu menu-left" style={{ display: 'flex', marginLeft: '12px' }}>
               <Link to="`/movie?search=`" style={menuItem}>Popular</Link>
-              <Link to="/top-rated" style={menuItem}>Top Rated</Link>
+              <Link to={`/movie?search=`} style={menuItem}>Top Rated</Link>
             </Nav>
 
             <Nav className="flex-child-menu navbar-right">
@@ -88,14 +88,9 @@ export default function Header() {
                   </Nav>
                 </Nav>
               )}
-
             </Nav>
-
-
-
           </Navbar.Collapse>
         </Navbar>
-
         <div className="top-search" style={{ border: 'none', width: '80%', margin: 'auto' }}>
           <FormControl as="select"  onChange={(e) => setSearchType(e.target.value)}>
             <option value="movie">Movie</option>
@@ -109,6 +104,7 @@ export default function Header() {
             onKeyDown={handleKeyDown}
           />
         </div>
+
       </Container>
     </header>
   );

@@ -132,12 +132,12 @@ export default function Home() {
                   View all <i className="ion-ios-arrow-right"></i>
                 </Link>
               </div>
-              <div className="">
-                <div className="">
-                  <div id="" className="">
+              <div className="tabs">
+                <div className="tab-content">
+                  <div id="tab1" className="tab active">
                     <div className="row">
                       {movie.map((movie) => (
-                        <Col md={3} className="">
+                        <Col md={3} className="movie-item-style-2 movie-item-style-1">
                           <div className="slide-it">
                             <div className="movie-item">
                               <div className="mv-img">

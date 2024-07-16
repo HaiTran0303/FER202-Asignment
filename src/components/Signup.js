@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Form, Button } from "react-bootstrap";
 import backgroundImage from "../image/slider-bg.jpg";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Signup() {
   const [email, setEmail] = useState("");
@@ -8,6 +9,7 @@ export default function Signup() {
   const [password, setPassword] = useState("");
   const [rePassword, setRePassword] = useState("");
   const [users, setUsers] = useState([]);
+  const navigate = useNavigate()
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
@@ -123,6 +125,7 @@ export default function Signup() {
               placeholder="Username"
               value={username}
               onChange={handleUsernameChange}
+              required
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -132,6 +135,7 @@ export default function Signup() {
               placeholder="Email"
               value={email}
               onChange={handleEmailChange}
+              required
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -141,6 +145,7 @@ export default function Signup() {
               placeholder="Password"
               value={password}
               onChange={handlePasswordChange}
+              required
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicRePassword">
@@ -150,6 +155,7 @@ export default function Signup() {
               placeholder="Re-Pasword"
               value={rePassword}
               onChange={handleRePasswordChange}
+              required
             />
           </Form.Group>
           <Form.Group style={buttonStyle}>
